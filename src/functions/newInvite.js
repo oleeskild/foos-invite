@@ -4,6 +4,7 @@ exports.handler = (event, context, callback) => {
     const invite = {data};
 
     return callback(null, {
-        body: JSON.stringify(invite);
+        body: JSON.stringify(invite),
+        statusCode:200
     })
 }
