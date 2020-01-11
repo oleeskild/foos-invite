@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css?family=Covered+By+Your+Grace&display=swap");
+
+@import "_variables.css";
+
+
+body {
+    text-align: center;
+    background-color: $page-color;
+    color: white;
+    font-family: 'Covered By Your Grace', cursive;
+    font-size: 24px;
+}
+header {
+    display: flex;
+    justify-content: center;
+}
+h1 {
+    border-bottom: 1px solid white;
+    font-size: 64px;
+    width: fit-content;
+} 
+
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+.foos-player {
+    text-align: center;
+    filter: drop-shadow(0px 0px 10px #000);
+    max-width: 350px;
+}
+
+.create-invite {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    
+    &>div{
+        margin:15px;
+    }
+}
+
+.greeting-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: black;
+    box-shadow: 0 0 10px rgba(0,0,0,.6);
+}
+
+input[type=text], textarea {
+    background-color: #222;
+    color: white;
+    padding: 5px 3px;
+    font-size: 20px;
+    border: 1px solid white;
+}
+
+label.color-picker-label {
+    border-radius: 30px;
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+    display: block;
+    overflow: hidden;
+    margin: 30px;
+}
+input[type=color]{
+    width: 65px;
+    height: 65px;
+    margin-top: -10px;
+    margin-left: -10px;
+}
+
+input[type=submit] {
+    padding: 10px 20px;
+    background-color: orange;
+    border: none;
+    font-size: 16px;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+label {
+    display: block;
+}

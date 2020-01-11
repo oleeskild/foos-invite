@@ -1,0 +1,60 @@
+---
+    title: Foos invite
+    layout: layouts/base.njk
+---
+
+{% block main %}
+<div class="create-invite">
+    <div class="foos-player">
+        {% include "svg/foos-player.svg" %}
+    </div>
+
+
+    <form name="greeting-card" method="POST" action="/new" class="create-invite" >
+        <div class="color-pickers">
+            <label class="color-picker-label">
+                <input id="headColor" type="color" name="headColor" class="color-picker" value="#00dbff" /> 
+            </label>
+
+            <label class="color-picker-label">
+                <input id="shirtColor" type="color" name="shirtColor" class="color-picker" value="#10e1a8" /> 
+            </label>
+            
+            <label class="color-picker-label">
+                <input id="shortColor" type="color" name="shortsColor" class="color-picker" value="#e95e4f" /> 
+            </label>
+
+            <label class="color-picker-label">
+                <input id="sockColor" type="color" name="sockColor" class="color-picker" value="#00dbff" /> 
+            </label>
+        </div>
+
+        <div class="greeting-form">
+                <p>
+                    <label for="toName">To</label>
+                    <input name="to" id="toName" type="text"/>
+                </p>
+                <p>
+                    <label for="message">Write something </label>
+                    <textarea cols="25" rows="10" id="message" name="message"></textarea>
+                </p>
+                
+                <p>
+                    <label for="fromName">From</label>
+                    <input id="fromName" name="from" type="text">
+                </p>
+                <p>
+                    <input type="submit" value="Lag invitasjon og få link">
+                </p>
+        </div>
+    </form>
+</div>
+{% endblock %}
+
+{% block scripts %}
+{%set js%}
+{% include "js/core.js" %}
+{% include "js/colorPicker.js" %}
+{% endset %}
+<script> {{js | safe}} </script>
+{% endblock %}
