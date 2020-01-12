@@ -9,5 +9,5 @@
 
 [[redirects]]
     from = "/new"
-    to = "./netlify/functions/newInvite"
+    to = "/.netlify/functions/newInvite"
     status = 200
