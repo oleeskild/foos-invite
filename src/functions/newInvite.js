@@ -1,3 +1,5 @@
+const querystring = require('querystring');
+
 exports.handler = (event, context, callback) => {
     const data = querystring.parse(event.body);
 
