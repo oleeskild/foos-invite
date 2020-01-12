@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Covered+By+Your+Grace&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Exo+2&display=swap");
 
 @import "_variables.css";
 
@@ -7,7 +7,7 @@ body {
     text-align: center;
     background-color: $page-color;
     color: white;
-    font-family: 'Covered By Your Grace', cursive;
+    font-family: 'Exo 2', sans-serif;
     font-size: 24px;
 }
 header {
@@ -15,7 +15,6 @@ header {
     justify-content: center;
 }
 h1 {
-    border-bottom: 1px solid white;
     font-size: 64px;
     width: fit-content;
 } 
@@ -77,11 +76,16 @@ input[type=color]{
     margin-left: -10px;
 }
 
+
+input[type=submit]:hover {
+    background-color: orange;
+}
+
 input[type=submit] {
     padding: 10px 20px;
-    background-color: orange;
-    border: none;
-    font-size: 16px;
+    background-color: transparent;
+    border: 1px solid orange;
+    font-size: 20px;
     color: white;
     border-radius: 10px;
     cursor: pointer;
@@ -89,4 +93,8 @@ input[type=submit] {
 
 label {
     display: block;
+}
+
+.greeting-form {
+    min-width: 350px;
 }
