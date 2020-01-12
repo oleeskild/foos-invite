@@ -1,6 +1,7 @@
-import querystring from 'querystring';
-import shortid from 'shortid';
-import faunadb from 'faunadb';
+const querystring = require('querystring');
+const shortid = require('shortid');
+const faunadb = require('faunadb');
+
 
 const q = faunadb.query;
 const client = new faunadb.Client({
