@@ -6,3 +6,8 @@
 
 [den]
     command = "npm run start"
+
+[[redirects]]
+    from = "/new"
+    to = "./netlify/functions/newInvite"
+    status = 200
