@@ -187,7 +187,7 @@ module.exports = ({ headColor, shirtColor, shortsColor, sockColor, ballColor, to
             <div class="flex-container--column half">
                 <div>Here's your link</div>
                 <div class="greeting-card">
-                    <div style="color: #11e1a8"> https://${hostName}/invite/${invitePath} </div>
+                    <div style="color: ${shirtColor}"> https://${hostName}/invite/${invitePath} </div>
                 </div>
                 <div class="greeting-card">
                     <h2>${to}</h2>
