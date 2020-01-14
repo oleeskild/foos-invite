@@ -32,13 +32,35 @@ h1 {
     max-width: 350px;
 }
 
-.create-invite {
+.flex-container{
     display: flex;
     justify-content:center;
     align-items: center;
     
     &>div{
         margin:15px;
+    }
+}
+
+.greeting-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 50%;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: black;
+    box-shadow: 0 0 10px rgba(0,0,0,.6);
+    align-items: flex-start;
+    h2{
+        margin: 10px;
+
+    }
+    .message {
+        margin: 10px;
+    }
+    .from {
+        margin: 10px;
+        margin-left: 20px;
     }
 }
 

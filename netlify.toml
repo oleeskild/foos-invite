@@ -2,12 +2,14 @@
     command = "npm run build"
     publish = "dist"
     functions = "src/functions"
-    NODE_ENV = "10.15.3"
-
-[den]
-    command = "npm run start"
+    NODE_ENV = "10.0.0"
 
 [[redirects]]
     from = "/new"
     to = "/.netlify/functions/newInvite"
     status = 200
+
+[[redirects]]
+    from = "/invite/*"
+    to = "/.netlify/functions/showInvite?id=:splat"
+    status = 302

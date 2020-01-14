@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Send an invite to play foos... JAMstack demo site inspired by Phil Hawksworth's virtual lolly project",
   "scripts": {
+    "start": "npm run dev",
     "dev": "cross-env ELEVENTY_ENV=dev eleventy",
     "build": "cross-env ELEVENTY_ENV=prod eleventy"
   },
@@ -16,6 +17,7 @@
   "dependencies": {
     "axios": "^0.19.1",
     "cssnano": "^4.1.10",
+    "dotenv": "^8.2.0",
     "faunadb": "^2.10.2",
     "fs": "0.0.1-security",
     "path": "^0.12.7",

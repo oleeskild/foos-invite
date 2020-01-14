@@ -4,13 +4,13 @@
 ---
 
 {% block main %}
-<div class="create-invite">
+<div class="flex-container">
     <div class="foos-player">
         {% include "svg/foos-player.svg" %}
     </div>
 
 
-    <form name="greeting-card" method="POST" action="/new" class="create-invite" >
+    <form name="greeting-card" method="POST" action="/new" class="flex-container" >
         <div class="color-pickers">
             <label class="color-picker-label">
                 <input id="headColor" type="color" name="headColor" class="color-picker" value="#00dbff" /> 

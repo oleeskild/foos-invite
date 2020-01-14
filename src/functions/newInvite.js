@@ -1,7 +1,7 @@
 const querystring = require('querystring');
 const shortid = require('shortid');
 const faunadb = require('faunadb');
-
+require('dotenv').config();
 
 const q = faunadb.query;
 const client = new faunadb.Client({
@@ -20,9 +20,19 @@ exports.handler = (event, context, callback) => {
         .then(response => {
             console.log('success', response);
             return callback(null, {
-                body: JSON.stringify(invite),
-                statusCode: 200
+                body: JSON.stringify(response),
+                statusCode: 302,
+                headers: {
+                    Location: `/invite/${uniquePath}`
+                }
             })
+        })
+        .catch(error=>{
+            console.log('error', error);
+            return callback(null, {
+                statusCode: 400,
+                body: JSON.stringify(error)
+            });
         })
 
 };

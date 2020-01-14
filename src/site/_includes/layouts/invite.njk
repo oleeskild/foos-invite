@@ -1,0 +1,36 @@
+{%extends 'layouts/base.njk' %}
+{% block extraStyle %}
+#Socks, #Feet {
+    fill: {{item.data.sockColor}} !important;
+}
+
+#Ball {
+    fill: {{item.data.ballColor}} !important;
+}
+
+#Head {
+    fill: {{item.data.headColor}} !important;
+}
+
+#Body {
+    fill: {{item.data.shirtColor}} !important;
+}
+
+#Shorts {
+    fill: {{item.data.shortColor}} !important;
+}
+
+{%endblock%}
+
+{%block main%}
+<div class="flex-container">
+<div class="foos-player">
+    {% include "svg/foos-player.svg" %}
+</div>
+<div class="greeting-card">
+<h2>{{item.data.to}}</h2>
+<div class="message">{{item.data.message}}</div>
+<div class="from">- {{item.data.from}}</div>
+</div>
+</div>
+{%endblock%}
