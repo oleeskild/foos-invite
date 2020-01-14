@@ -1,4 +1,4 @@
-module.exports = ({ headColor, shirtColor, shortsColor, sockColor, ballColor, to, message, from, invitepath }) => {
+module.exports = ({ headColor, shirtColor, shortsColor, sockColor, ballColor, to, message, from, invitePath, hostName }) => {
     return `
     
     <!DOCTYPE html>
@@ -183,10 +183,17 @@ module.exports = ({ headColor, shirtColor, shortsColor, sockColor, ballColor, to
                 </g>
               </svg>
             </div>
-            <div class="greeting-card">
-              <h2>${to}</h2>
-              <div class="message">${message}</div>
-              <div class="from">- ${from}</div>
+
+            <div class="flex-container--column half">
+                <div>Here's your link</div>
+                <div class="greeting-card">
+                    <div style="color: #11e1a8"> https://${hostName}/invite/${invitePath} </div>
+                </div>
+                <div class="greeting-card">
+                    <h2>${to}</h2>
+                    <div class="message">${message}</div>
+                    <div class="from">- ${from}</div>
+                </div>
             </div>
           </div>
         </div>

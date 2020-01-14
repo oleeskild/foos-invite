@@ -9,6 +9,7 @@ const client = new faunadb.Client({
 });
 
 exports.handler = (event, context, callback) => {
+    let hostName = event.headers.host || '';
     const path = event.queryStringParameters.id.replace("/", "");
 
     client.query(
@@ -16,7 +17,7 @@ exports.handler = (event, context, callback) => {
     ).then(response=>{
         return callback(null, {
             statusCode: 200,
-            body: showInviteTemplate(response.data)
+            body: showInviteTemplate({...response.data, hostName})
         });
     }).catch(error=>{
         console.log('Error:', error);
