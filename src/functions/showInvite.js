@@ -1,5 +1,6 @@
 
 const faunadb = require('faunadb');
+const showInviteTemplate = require('./showInviteTemplate.js');
 require('dotenv').config();
 
 const q = faunadb.query;
@@ -15,7 +16,7 @@ exports.handler = (event, context, callback) => {
     ).then(response=>{
         return callback(null, {
             statusCode: 200,
-            body: JSON.stringify(response.data)
+            body: showInviteTemplate(response.data)
         });
     }).catch(error=>{
         console.log('Error:', error);
