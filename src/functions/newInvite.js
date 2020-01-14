@@ -1,6 +1,7 @@
 const querystring = require('querystring');
 const shortid = require('shortid');
 const faunadb = require('faunadb');
+const axios = require('axios');
 require('dotenv').config();
 
 const q = faunadb.query;
@@ -19,6 +20,14 @@ exports.handler = (event, context, callback) => {
     client.query(q.Create(q.Collection('foos-invites'), invite))
         .then(response => {
             console.log('success', response);
+
+            axios.post('https://api.netlify.com/build_hooks/5e1dff6d77168b4aa5ab6d2e')
+                .then(function(response){
+                    console.log(response);
+                }).catch(function(error){
+                    console.log(error);
+                });
+
             return callback(null, {
                 body: JSON.stringify(response),
                 statusCode: 302,
