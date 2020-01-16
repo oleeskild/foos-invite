@@ -100,10 +100,10 @@ label.color-picker-label {
     margin: 30px;
 }
 input[type=color]{
-    width: 65px;
-    height: 65px;
-    margin-top: -10px;
-    margin-left: -10px;
+    width: 85px;
+    height: 85px;
+    margin-top: -15px;
+    margin-left: -15px;
 }
 
 
