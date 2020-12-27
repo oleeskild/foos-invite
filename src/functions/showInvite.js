@@ -9,7 +9,7 @@ const client = new faunadb.Client({
 });
 
 exports.handler = (event, context, callback) => {
-    let hostName = event.headers.host || 'foosinvite.vip';
+    let hostName = event.headers.host || 'foosinvite.netlify.app';
     const path = event.queryStringParameters.id.replace("/", "");
 
     client.query(
