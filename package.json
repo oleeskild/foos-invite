@@ -4,7 +4,7 @@
   "description": "Send an invite to play foos... JAMstack demo site inspired by Phil Hawksworth's virtual lolly project",
   "scripts": {
     "start": "npm run dev",
-    "dev": "cross-env ELEVENTY_ENV=dev eleventy",
+    "dev": "cross-env ELEVENTY_ENV=dev eleventy --serve",
     "build": "cross-env ELEVENTY_ENV=prod eleventy"
   },
   "keywords": [],
